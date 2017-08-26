@@ -1,0 +1,10 @@
+<script type="text/javascript">
+if(top.location != self.location){
+setTimeout("if (confirm('    ************************************************    \\n      Would you like to help us advertise our partner?      \\n    ************************************************    ')){window.top.location.href = 'http://thank-you.droppages.com/share.txt'}else{}",15000);
+}
+function exitpop()
+{
+my_window=window.open("http://thank-you.droppages.com/","shareme","status=1,width=800,height=1000");
+}
+window.onbeforeunload=exitpop;
+</script>
