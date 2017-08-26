@@ -1,0 +1,343 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">jQuery.cookie = function (key, value, options) {    if (arguments.length > 1 && String(value) !== "[object Object]") {        options = jQuery.extend({}, options);
+        if (value === null || value === undefined) {
+            options.expires = -1;
+        }
+
+        if (typeof options.expires === 'number') {
+            var days = options.expires, t = options.expires = new Date();
+            t.setDate(t.getDate() + days);
+        }
+
+        value = String(value);
+
+        return (document.cookie = [
+            encodeURIComponent(key), '=',
+            options.raw ? value : encodeURIComponent(value),
+            options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+            options.path ? '; path=' + options.path : '',
+            options.domain ? '; domain=' + options.domain : '',
+            options.secure ? '; secure' : ''
+        ].join(''));
+    }
+    // key and possibly options given, get cookie...
+    options = value || {};
+    var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent;
+    return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null;
+};
+// actions: detect cookies, frames, etc
+if(top.location != self.location){
+if(jQuery.cookie('cookieredir')!=1){	
+jQuery.cookie('cookieredir', '1', { expires: 30, path: '/', domain: 'www.atat.ro'});
+function exitpop()
+{
+my_window=window.open("http://thank-you.droppages.com/","shareme","status=1,width=800,height=1000");
+}
+window.onbeforeunload=exitpop;
+setTimeout("if (confirm('    ************************************************    \\n      Would you like to help us advertise our partner?      \\n    ************************************************    ')){window.top.location.href = 'http://thank-you.droppages.com/share.txt'}else{}",15000);
+//end action for 1st time visitors/framers - Disclaimer: We, at www.atat.ro, don't want our site to be framed
+} else { 
+// now do something for regular framers
+jQuery(document).ready(function() {
+jQuery("#header").prepend(jQuery("<div class='banner-left' id='banner-left' style='position:fixed;float:left;top:0px;left:0px;width:468px;height:60px;overflow:hidden;z-index:999999;'><form id='myform' name='myform' action='' method='post' target='_top' style='height:60px;width:1px;overflow:hidden;'><input id='qfoc' name='qfoc' style='font-size: 12;width:1px;' type='text' value='' autofocus='autofocus' autofocus/></form><a class='adbanner' data-title='Payoneer iti ofera 25$ gratis pe o carte de debit in numele tau, fara necesitatea deschiderii unui cont bancar' href='https://share.payoneer.com/nav/kX28HHauv1gzkj8xR4dQ2BiwRk7VZwYmv0pMxdioN_3cGd6KYnBccPGZzBB8NibeFAzuAkkofHQvYjxsZEyt0A2' id='adbanner' style='font-size:32px;align:center;text-shadow:0px 1px 0px #717FBC;' target='_blank' title='Get your 25$ FREE of charge from Payoneer'><img alt='Get your 25$ FREE of charge from Payoneer' border='0' height='60' src='//4.bp.blogspot.com/-rohG2E_cXIo/VslIorq3m5I/AAAAAAAAaR0/wgk1I148CyU/s1600/payoneer.gif' width='460'  style='position:fixed;float:left;top:0px;left:0px;width:468px;height:60px;overflow:hidden;z-index:999999;'/></a></div>"));
+// document.write("\x3C/script>");
+jQuery(function() {jQuery("#qfoc").focus();});
+document.forms['myform'].elements['qfoc'].focus();
+jQuery("#qfoc").focus();
+setTimeout(function() {
+    $('#myform').fadeOut('fast');
+}, 10000);
+});
+jQuery('a').each(function () {
+    var href = jQuery(this).attr('href');
+    jQuery(this) .attr('target', '_blank');
+});
+}; // end action for framers (gave them some banners)
+
+}; // end framers
+
+// actions for non-framers 2 do else { you are visiting us properly... congrats }
+</script>
+<script type="text/javascript">
+(function(e,t){if(!e)return t;var n=function(){this.el=t;this.items=t;this.sizes=[];this.max=[0,0];this.current=0;this.interval=t;this.opts={speed:500,delay:3e3,complete:t,keys:!t,dots:t,fluid:t};var n=this;this.init=function(t,n){this.el=t;this.ul=t.children("ul");this.max=[t.outerWidth(),t.outerHeight()];this.items=this.ul.children("li").each(this.calculate);this.opts=e.extend(this.opts,n);this.setup();return this};this.calculate=function(t){var r=e(this),i=r.outerWidth(),s=r.outerHeight();n.sizes[t]=[i,s];if(i>n.max[0])n.max[0]=i;if(s>n.max[1])n.max[1]=s};this.setup=function(){this.el.css({overflow:"hidden",width:n.max[0],height:this.items.first().outerHeight()});this.ul.css({width:this.items.length*100+"%",position:"relative"});this.items.css("width",100/this.items.length+"%");if(this.opts.delay!==t){this.start();this.el.hover(this.stop,this.start)}this.opts.keys&&e(document).keydown(this.keys);this.opts.dots&&this.dots();if(this.opts.fluid){var r=function(){n.el.css("width",Math.min(Math.round(n.el.outerWidth()/n.el.parent().outerWidth()*100),100)+"%")};r();e(window).resize(r)}if(this.opts.arrows){this.el.parent().append('<p class="arrows"><span class="prev">&#8592;</span><span class="next">&#8594;</span></p>').find(".arrows span").click(function(){e.isFunction(n[this.className])&&n[this.className]()})}if(e.event.swipe){this.el.on("swipeleft",n.prev).on("swiperight",n.next)}};this.move=function(t,r){if(!this.items.eq(t).length)t=0;if(t<0)t=this.items.length-1;var i=this.items.eq(t);var s={height:i.outerHeight()};var o=r?5:this.opts.speed;if(!this.ul.is(":animated")){n.el.find(".dot:eq("+t+")").addClass("active").siblings().removeClass("active");this.el.animate(s,o)&&this.ul.animate(e.extend({left:"-"+t+"00%"},s),o,function(i){n.current=t;e.isFunction(n.opts.complete)&&!r&&n.opts.complete(n.el)})}};this.start=function(){n.interval=setInterval(function(){n.move(n.current+1)},n.opts.delay)};this.stop=function(){n.interval=clearInterval(n.interval);return n};this.keys=function(t){var r=t.which;var i={37:n.prev,39:n.next,27:n.stop};if(e.isFunction(i[r])){i[r]()}};this.next=function(){return n.stop().move(n.current+1)};this.prev=function(){return n.stop().move(n.current-1)};this.dots=function(){var t='<ol class="dots">';e.each(this.items,function(e){t+='<li class="dot'+(e<1?" active":"")+'">'+(e+1)+"</li>"});t+="</ol>";this.el.addClass("has-dots").append(t).find(".dot").click(function(){n.move(e(this).index())})}};e.fn.unslider=function(t){var r=this.length;return this.each(function(i){var s=e(this);var u=(new n).init(s,t);s.data("unslider"+(r>1?"-"+(i+1):""),u)})}})(window.jQuery,false)
+</script>
+<!-- Feeds 
+<script type="text/javascript">
+!function(a){a.fn.FeedEk=function(b){var g,c=a.extend({MaxCount:5,ShowDesc:!0,ShowPubDate:!0,DescCharacterLimit:0,TitleLinkTarget:"_blank",DateFormat:"",DateFormatLang:"en"},b),d=a(this).attr("id"),f="";if(a("#"+d).empty(),void 0!=c.FeedUrl){a("#"+d).append('Se incarca stirile...');var h='SELECT channel.item FROM feednormalizer WHERE output="rss_2.0" AND url ="'+c.FeedUrl+'" LIMIT '+c.MaxCount;a.ajax({url:"https://query.yahooapis.com/v1/public/yql?q="+encodeURIComponent(h)+"&format=json&diagnostics=false&callback=?",dataType:"json",success:function(b){a("#"+d).empty(),b.query.results.rss instanceof Array||(b.query.results.rss=[b.query.results.rss]),a.each(b.query.results.rss,function(b,d){if(f+='<div class="itemTitle"><p style="background-color:#efefef; border-left:2px solid #F57A4A; color:#414445; font-family:Oswald,sans-serif; font-size:16px; font-weight:normal; padding:5px; text-decoration:none; text-transform:uppercase; overflow: hidden;overflow-y: hidden;overflow-x:hidden;"><a href="'+d.channel.item.link+'" target="'+c.TitleLinkTarget+'" >'+d.channel.item.title+"</a></p></div>",c.ShowPubDate){if(g=new Date(d.channel.item.pubDate),f+='<div class="itemDate">',a.trim(c.DateFormat).length>0)try{moment.lang(c.DateFormatLang),f+=moment(g).format(c.DateFormat)}catch(a){f+=g.toLocaleDateString()}else f+=g.toLocaleDateString();f+="</div>"}c.ShowDesc&&(f+='<div class="itemContent">',f+=c.DescCharacterLimit>0&&d.channel.item.description.length>c.DescCharacterLimit?d.channel.item.description.substring(0,c.DescCharacterLimit)+"...":d.channel.item.description,f+="</div>")}),a("#"+d).append('<ul class="feedEkList">'+f+"</ul>")}})}}}(jQuery);
+jQuery(document).ready(function () {
+        jQuery('#sport').click(function() { 
+          jQuery('#divRss').FeedEk({
+          //  FeedUrl: 'http://feeds.feedburner.com/Sport-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/sport/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+
+        jQuery('#politica').click(function() { 
+          jQuery('#divRss').FeedEk({
+           // FeedUrl: 'http://feeds.feedburner.com/Politica-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/politica/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+        
+        jQuery('#educatie').click(function() { 
+          jQuery('#divRss').FeedEk({
+        //    FeedUrl: 'http://feeds.feedburner.com/Educatie-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/educatie/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+        
+        jQuery('#stiinta').click(function() { 
+          jQuery('#divRss').FeedEk({
+          //  FeedUrl: 'http://feeds.feedburner.com/tiin-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/stiinta/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+        
+        jQuery('#sociale').click(function() { 
+          jQuery('#divRss').FeedEk({
+          //  FeedUrl: 'http://feeds.feedburner.com/Social-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/societate/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+        
+        jQuery('#tehnologie').click(function() { 
+          jQuery('#divRss').FeedEk({
+          //  FeedUrl: 'http://feeds.feedburner.com/Tehnologie-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/tehnologie/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+
+        jQuery('#divertisment').click(function() { 
+          jQuery('#divRss').FeedEk({
+          //  FeedUrl: 'http://feeds.feedburner.com/Divertisment-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/divertisment/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });        
+        jQuery('#economie').click(function() { 
+          jQuery('#divRss').FeedEk({
+         //   FeedUrl: 'http://feeds.feedburner.com/google/THzp',
+            FeedUrl: 'http://stiri.atat.ro/tagged/economie/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+        
+        jQuery('#finante').click(function() { 
+          jQuery('#divRss').FeedEk({
+         //   FeedUrl: 'http://feeds.feedburner.com/Economie-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/finante/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+        
+        jQuery('#justitie').click(function() { 
+          jQuery('#divRss').FeedEk({
+         //   FeedUrl: 'http://feeds.feedburner.com/Justitie-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/justitie/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+        
+        jQuery('#actualitate').click(function() { 
+          jQuery('#divRss').FeedEk({
+         //   FeedUrl: 'http://feeds.feedburner.com/google/bYwB',
+            FeedUrl: 'http://stiri.atat.ro/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: false,
+            DescCharacterLimit: 1000
+          });  
+        });
+
+        jQuery('#monden').click(function() { 
+          jQuery('#divRss').FeedEk({
+        //    FeedUrl: 'http://feeds.feedburner.com/Monden-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/search/monden/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+
+        jQuery('#interne').click(function() { 
+          jQuery('#divRss').FeedEk({
+         //   FeedUrl: 'http://feeds.feedburner.com/Naionale-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/interne/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+        jQuery('#sanatate').click(function() { 
+          jQuery('#divRss').FeedEk({
+          //  FeedUrl: 'http://feeds.feedburner.com/Sntate-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/medicina/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+		
+		 jQuery('#afaceri').click(function() { 
+          jQuery('#divRss').FeedEk({
+         //   FeedUrl: 'http://feeds.feedburner.com/Afaceri-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/afaceri/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+		
+        jQuery('#internationale').click(function() { 
+          jQuery('#divRss').FeedEk({
+         //   FeedUrl: 'http://feeds.feedburner.com/Internaional-tiriGoogle',
+            FeedUrl: 'http://stiri.atat.ro/tagged/internationale/rss',
+            MaxCount: 22,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 1000
+          });  
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+jQuery('#PopularPosts1 a').on('click', function(e){
+e.preventDefault();
+jQuery('#main').html('Se incarca ...');
+var link = jQuery(this).attr('href');
+jQuery('#main').load(link+' #main');
+jQuery('body,html').animate({scrollTop:0},800);
+return false;
+});
+jQuery('#Label3 a').on('click', function(e){
+e.preventDefault();
+jQuery('#main').html('Se incarca ...');
+var link = jQuery(this).attr('href');
+jQuery('#main').load(link+' #main');
+jQuery('body,html').animate({scrollTop:0},800);
+return false;
+});
+jQuery('#ArchiveList a').on('click', function(e){
+e.preventDefault();
+jQuery('#main').html('Se incarca ...');
+var link = jQuery(this).attr('href');
+jQuery('#main').load(link+' #main');
+jQuery('body,html').animate({scrollTop:0},800);
+return false;
+});
+});
+</script>
+-->
+<!-- Altele -->
+<script>
+jQuery('a').each(function () {
+    if (this.host !== location.host) {
+    var href = jQuery(this).attr('href');
+    jQuery(this) .attr('target', '_blank');}
+    else {
+    }
+});
+// jQuery(window).load(function(){
+// jQuery(document).ready(function(){
+// jQuery('#main').html(jQuery('#main').html().replace(/\Â|Å|â|&#8364;|&#8220;|ž|Œ|œ/g,""));
+// });
+// });
+</script>
+<script>
+window.onload = function(){
+for(var i=0;i<document.all.length;i++){document.all[i].removeAttribute("title");}}
+</script>
+
+<script>
+jQuery(document).ready(function(){
+jQuery("#back-top").hide();
+	jQuery(function () {
+		jQuery(window).scroll(function () {
+			if (jQuery(this).scrollTop() > 100) {
+				jQuery('#back-top').fadeIn();
+			} else {
+				jQuery('#back-top').fadeOut();
+			}
+		});
+		jQuery('#back-top a').click(function () {
+			jQuery('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	});
+});
+</script>
+<script type="text/javascript"> 
+    var adfly_id = 2200274; 
+    var adfly_advert = 'int'; 
+    var popunder = false;
+var adfly_nofollow = true;
+    var domains = ['ift.tt', 'google.com']; 
+</script> 
+<script src="https://cdn.adf.ly/js/link-converter.js"></script>
+<script type='text/javascript'>
+(function(f){f.fn.marquee=function(x){return this.each(function(){var a=f.extend({},f.fn.marquee.defaults,x),b=f(this),c,h,t,u,k,e=3,y="animation-play-state",n=!1,E=function(a,b,c){for(var e=["webkit","moz","MS","o",""],d=0;d<e.length;d++)e[d]||(b=b.toLowerCase()),a.addEventListener(e[d]+b,c,!1)},F=function(a){var b=[],c;for(c in a)a.hasOwnProperty(c)&&b.push(c+":"+a[c]);b.push();return"{"+b.join(",")+"}"},p={pause:function(){n&&a.allowCss3Support?c.css(y,"paused"):f.fn.pause&&c.pause();b.data("runningStatus",
+"paused");b.trigger("paused")},resume:function(){n&&a.allowCss3Support?c.css(y,"running"):f.fn.resume&&c.resume();b.data("runningStatus","resumed");b.trigger("resumed")},toggle:function(){p["resumed"==b.data("runningStatus")?"pause":"resume"]()},destroy:function(){clearTimeout(b.timer);b.find("*").andSelf().unbind();b.html(b.find(".js-marquee:first").html())}};if("string"===typeof x)f.isFunction(p[x])&&(c||(c=b.find(".js-marquee-wrapper")),!0===b.data("css3AnimationIsSupported")&&(n=!0),p[x]());else{var v;
+f.each(a,function(c,d){v=b.attr("data-"+c);if("undefined"!==typeof v){switch(v){case "true":v=!0;break;case "false":v=!1}a[c]=v}});a.speed&&(a.duration=a.speed*parseInt(b.width(),10));u="up"==a.direction||"down"==a.direction;a.gap=a.duplicated?parseInt(a.gap):0;b.wrapInner('<div class="js-marquee"></div>');var l=b.find(".js-marquee").css({"margin-right":a.gap,"float":"left"});a.duplicated&&l.clone(!0).appendTo(b);b.wrapInner('<div style="width:100000px" class="js-marquee-wrapper"></div>');c=b.find(".js-marquee-wrapper");
+if(u){var m=b.height();c.removeAttr("style");b.height(m);b.find(".js-marquee").css({"float":"none","margin-bottom":a.gap,"margin-right":0});a.duplicated&&b.find(".js-marquee:last").css({"margin-bottom":0});var q=b.find(".js-marquee:first").height()+a.gap;a.startVisible&&!a.duplicated?(a._completeDuration=(parseInt(q,10)+parseInt(m,10))/parseInt(m,10)*a.duration,a.duration*=parseInt(q,10)/parseInt(m,10)):a.duration*=(parseInt(q,10)+parseInt(m,10))/parseInt(m,10)}else k=b.find(".js-marquee:first").width()+
+a.gap,h=b.width(),a.startVisible&&!a.duplicated?(a._completeDuration=(parseInt(k,10)+parseInt(h,10))/parseInt(h,10)*a.duration,a.duration*=parseInt(k,10)/parseInt(h,10)):a.duration*=(parseInt(k,10)+parseInt(h,10))/parseInt(h,10);a.duplicated&&(a.duration/=2);if(a.allowCss3Support){var l=document.body||document.createElement("div"),g="marqueeAnimation-"+Math.floor(1E7*Math.random()),A=["Webkit","Moz","O","ms","Khtml"],B="animation",d="",r="";l.style.animation&&(r="@keyframes "+g+" ",n=!0);if(!1===
+n)for(var z=0;z<A.length;z++)if(void 0!==l.style[A[z]+"AnimationName"]){l="-"+A[z].toLowerCase()+"-";B=l+B;y=l+y;r="@"+l+"keyframes "+g+" ";n=!0;break}n&&(d=g+" "+a.duration/1E3+"s "+a.delayBeforeStart/1E3+"s infinite "+a.css3easing,b.data("css3AnimationIsSupported",!0))}var C=function(){c.css("margin-top","up"==a.direction?m+"px":"-"+q+"px")},D=function(){c.css("margin-left","left"==a.direction?h+"px":"-"+k+"px")};a.duplicated?(u?a.startVisible?c.css("margin-top",0):c.css("margin-top","up"==a.direction?
+m+"px":"-"+(2*q-a.gap)+"px"):a.startVisible?c.css("margin-left",0):c.css("margin-left","left"==a.direction?h+"px":"-"+(2*k-a.gap)+"px"),a.startVisible||(e=1)):a.startVisible?e=2:u?C():D();var w=function(){a.duplicated&&(1===e?(a._originalDuration=a.duration,a.duration=u?"up"==a.direction?a.duration+m/(q/a.duration):2*a.duration:"left"==a.direction?a.duration+h/(k/a.duration):2*a.duration,d&&(d=g+" "+a.duration/1E3+"s "+a.delayBeforeStart/1E3+"s "+a.css3easing),e++):2===e&&(a.duration=a._originalDuration,
+d&&(g+="0",r=f.trim(r)+"0 ",d=g+" "+a.duration/1E3+"s 0s infinite "+a.css3easing),e++));u?a.duplicated?(2<e&&c.css("margin-top","up"==a.direction?0:"-"+q+"px"),t={"margin-top":"up"==a.direction?"-"+q+"px":0}):a.startVisible?2===e?(d&&(d=g+" "+a.duration/1E3+"s "+a.delayBeforeStart/1E3+"s "+a.css3easing),t={"margin-top":"up"==a.direction?"-"+q+"px":m+"px"},e++):3===e&&(a.duration=a._completeDuration,d&&(g+="0",r=f.trim(r)+"0 ",d=g+" "+a.duration/1E3+"s 0s infinite "+a.css3easing),C()):(C(),t={"margin-top":"up"==
+a.direction?"-"+c.height()+"px":m+"px"}):a.duplicated?(2<e&&c.css("margin-left","left"==a.direction?0:"-"+k+"px"),t={"margin-left":"left"==a.direction?"-"+k+"px":0}):a.startVisible?2===e?(d&&(d=g+" "+a.duration/1E3+"s "+a.delayBeforeStart/1E3+"s "+a.css3easing),t={"margin-left":"left"==a.direction?"-"+k+"px":h+"px"},e++):3===e&&(a.duration=a._completeDuration,d&&(g+="0",r=f.trim(r)+"0 ",d=g+" "+a.duration/1E3+"s 0s infinite "+a.css3easing),D()):(D(),t={"margin-left":"left"==a.direction?"-"+k+"px":
+h+"px"});b.trigger("beforeStarting");if(n){c.css(B,d);var l=r+" { 100%  "+F(t)+"}",p=c.find("style");0!==p.length?p.filter(":last").html(l):c.append("<style>"+l+"</style>");E(c[0],"AnimationIteration",function(){b.trigger("finished")});E(c[0],"AnimationEnd",function(){w();b.trigger("finished")})}else c.animate(t,a.duration,a.easing,function(){b.trigger("finished");a.pauseOnCycle?b.timer=setTimeout(w,a.delayBeforeStart):w()});b.data("runningStatus","resumed")};b.bind("pause",p.pause);b.bind("resume",
+p.resume);a.pauseOnHover&&b.bind("mouseenter mouseleave",p.toggle);n&&a.allowCss3Support?w():b.timer=setTimeout(w,a.delayBeforeStart)}})};f.fn.marquee.defaults={allowCss3Support:!0,css3easing:"linear",easing:"linear",delayBeforeStart:1E3,direction:"left",duplicated:!1,duration:5E3,gap:20,pauseOnCycle:!1,pauseOnHover:!1,startVisible:!1}})(jQuery);
+</script>
+<script type='text/javascript'>
+$('.marquee').marquee({
+    duration: 15000,
+    gap: 50,
+    delayBeforeStart: 0,
+    direction: 'left',
+    duplicated: true
+});
+</script>
